@@ -1,0 +1,25 @@
+[project]
+name = "qrcodegen"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Stefan Siebel", email = "siebel.stefan@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "qrcode[pil]>=8.2",
+]
+
+[project.scripts]
+qrcodegen = "qrcodegen:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "resvg-py>=0.5.0",
+    "zxing-cpp>=3.1.1",
+]
